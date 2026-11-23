@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Dayan Hussain — AI Engineer & Founder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">SD</div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+            <p class="loader-text">INITIALIZING PORTFOLIO<span class="dots">...</span></p>
+        </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- 3D CANVAS BACKGROUND -->
+    <canvas id="webgl"></canvas>
+
+    <!-- GRAIN OVERLAY -->
+    <div class="grain"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#" class="brand" data-cursor="hover">
+                <span class="brand-mark">SD</span>
+                <span class="brand-text">
+                    <strong>SYED DAYAN HUSSAIN</strong>
+                    <em>ABH TECHNOLOGIES · AI</em>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#work" data-cursor="hover"><span>01</span> Work</a></li>
+                <li><a href="#about" data-cursor="hover"><span>02</span> About</a></li>
+                <li><a href="#stack" data-cursor="hover"><span>03</span> Stack</a></li>
+                <li><a href="#vision" data-cursor="hover"><span>04</span> Vision</a></li>
+                <li><a href="#contact" data-cursor="hover"><span>05</span> Contact</a></li>
+            </ul>
+            <a href="https://wa.me/923223010472" target="_blank" class="nav-cta" data-cursor="hover">
+                <span class="pulse-dot"></span> LET'S TALK
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-tag" data-reveal>
+                    <span class="pulse-dot"></span>
+                    FOUNDER @ ABH TECHNOLOGIES · BS AI YEAR 2
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line" data-split>Building</span>
+                    <span class="line" data-split>Intelligent</span>
+                    <span class="line gradient" data-split>Systems.</span>
+                </h1>
+
+                <p class="hero-sub" data-reveal>
+                    I'm <strong class="highlight-text">Syed Dayan Hussain</strong> — AI student, founder, and full-stack engineer.
+                    I architect voice-driven AI agents, enterprise ERPs, and real-time web ecosystems
+                    under my software house <strong class="highlight-text">ABH Technologies</strong>.
+                </p>
+
+                <div class="hero-actions" data-reveal>
+                    <a href="#work" class="btn btn-primary" data-magnetic data-cursor="hover">
+                        Explore Work <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="https://wa.me/923223010472" target="_blank" class="btn btn-ghost" data-magnetic data-cursor="hover">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+
+                <div class="hero-metrics" data-reveal>
+                    <div class="metric">
+                        <strong data-count="8">0</strong>
+                        <span>Systems Shipped</span>
+                    </div>
+                    <div class="metric">
+                        <strong data-count="2">0</strong>
+                        <span>Years Engineering</span>
+                    </div>
+                    <div class="metric">
+                        <strong data-count="1">0</strong>
+                        <span>Software House</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D PHOTO STAGE -->
+            <div class="hero-right">
+                <div class="photo-stage" id="photo-stage">
+                    <div class="stage-ring ring-1"></div>
+                    <div class="stage-ring ring-2"></div>
+                    <div class="stage-ring ring-3"></div>
+
+                    <div class="photo-frame" id="photo-frame">
+                        <!-- 🔴 AAPKI HERO PHOTO YAHAN -->
+                        <img src="images/dayan.jpg" alt="Syed Dayan Hussain" id="hero-photo">
+                        <div class="photo-overlay">
+                            <div class="photo-meta">
+                                <span>AI ENGINEER · CEO</span>
+                                <strong>Syed Dayan Hussain</strong>
+                            </div>
+                            <i class="fas fa-cube"></i>
+                        </div>
+                    </div>
+
+                    <div class="float-chip chip-1">
+                        <i class="fas fa-microphone-lines"></i>
+                        <div>
+                            <span>VOICE AI</span>
+                            <strong>Co-Pilot Bot</strong>
+                        </div>
+                    </div>
+                    <div class="float-chip chip-2">
+                        <i class="fas fa-bolt"></i>
+                        <div>
+                            <span>EV SYSTEM</span>
+                            <strong>Smart Charge</strong>
+                        </div>
+                    </div>
+                    <div class="float-chip chip-3">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <span>STACK</span>
+                            <strong>React · C++ · PHP</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE STRIP -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>AI ENGINEERING</span><span>◆</span>
+            <span>VOICE ASSISTANTS</span><span>◆</span>
+            <span>ENTERPRISE ERP</span><span>◆</span>
+            <span>REAL-TIME TRACKING</span><span>◆</span>
+            <span>ROBOTICS R&D</span><span>◆</span>
+            <span>PROMPT ENGINEERING</span><span>◆</span>
+            <span>AI ENGINEERING</span><span>◆</span>
+            <span>VOICE ASSISTANTS</span><span>◆</span>
+            <span>ENTERPRISE ERP</span><span>◆</span>
+            <span>REAL-TIME TRACKING</span><span>◆</span>
+            <span>ROBOTICS R&D</span><span>◆</span>
+            <span>PROMPT ENGINEERING</span><span>◆</span>
+        </div>
+    </div>
+
+    <!-- WORK / PROJECTS -->
+    <section class="work" id="work">
+        <div class="section-head">
+            <span class="section-num">01 / WORK</span>
+            <h2 class="section-title" data-split>Selected Systems</h2>
+            <p class="section-sub" data-reveal>
+                A curated selection of AI systems, ERPs and real-time platforms shipped under ABH Technologies.
+            </p>
+        </div>
+
+        <div class="projects">
+
+            <!-- PROJECT 1 — FLAGSHIP -->
+            <article class="project project-feature" data-cursor="view">
+                <div class="project-grid">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-solid">★ FLAGSHIP</span>
+                            <span class="tag">AI · VOICE</span>
+                            <span class="tag">GEOLOCATION</span>
+                        </div>
+                        <h3 class="project-title">AI EV Station Recommender & Voice Co-Pilot</h3>
+                        <p class="project-desc">
+                            An AI-powered mobility assistant for electric vehicles. Analyzes real-time battery
+                            telemetry and predicts optimal charging stations, paired with a two-way voice agent
+                            that responds hands-free to driver queries.
+                        </p>
+                        <ul class="project-list">
+                            <li><i class="fas fa-check"></i> Battery health & range prediction engine</li>
+                            <li><i class="fas fa-check"></i> Speech-to-Text + Text-to-Speech voice loop</li>
+                            <li><i class="fas fa-check"></i> Smart geolocation & station ranking</li>
+                        </ul>
+                    </div>
+                    <div class="project-visual">
+                        <div class="voice-console">
+                            <div class="console-head">
+                                <span class="live-dot"></span> VOICE_AGENT · LIVE
+                                <span class="battery">BAT 22%</span>
+                            </div>
+                            <div class="bubble user">
+                                <span>DRIVER</span>
+                                <p>"Find me the nearest fast charger."</p>
+                            </div>
+                            <div class="bubble ai">
+                                <span>CO-PILOT AI</span>
+                                <p>"Station Alpha — 1.6 km away, 150kW DC. Arrival charge ≈ 18%."</p>
+                            </div>
+                            <div class="waveform">
+                                <div></div><div></div><div></div><div></div><div></div>
+                                <div></div><div></div><div></div><div></div><div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class="project" data-cursor="view">
+                <div class="project-top">
+                    <div class="project-tags">
+                        <span class="tag">ERP · LIVE TRACKING</span>
+                    </div>
+                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                </div>
+                <h3 class="project-title">Restaurant Management & Live Order Tracking</h3>
+                <p class="project-desc">
+                    End-to-end restaurant system with customer ordering portal, real-time live order
+                    tracking for customers, and a full internal management suite for kitchen, billing and reports.
+                </p>
+                <div class="project-pipeline">
+                    <span>Order</span><i class="fas fa-arrow-right"></i>
+                    <span>Kitchen</span><i class="fas fa-arrow-right"></i>
+                    <span class="live">● Live Track</span>
+                </div>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class="project" data-cursor="view">
+                <div class="project-top">
+                    <div class="project-tags">
+                        <span class="tag">HEALTHCARE ERP</span>
+                    </div>
+                    <div class="project-icon"><i class="fas fa-capsules"></i></div>
+                </div>
+                <h3 class="project-title">Medical Pharmacy Agency Management</h3>
+                <p class="project-desc">
+                    Commercial ERP for medical & pharmacy distribution agencies. Automates stock control,
+                    batch expiry alerts, supplier ledgers, billing, and profit analytics.
+                </p>
+                <div class="project-pipeline">
+                    <span>Stock</span><i class="fas fa-arrow-right"></i>
+                    <span>Ledgers</span><i class="fas fa-arrow-right"></i>
+                    <span class="live">● Reports</span>
+                </div>
+            </article>
+
+            <!-- PROJECT 4 -->
+            <article class="project" data-cursor="view">
+                <div class="project-top">
+                    <div class="project-tags">
+                        <span class="tag">CIVIC WEB PORTAL</span>
+                    </div>
+                    <div class="project-icon"><i class="fas fa-trophy"></i></div>
+                </div>
+                <h3 class="project-title">City Sports Registration & Live Scoring</h3>
+                <p class="project-desc">
+                    City-level sports tournament registration portal coupled with a real-time live scoring
+                    engine for audiences and organizers.
+                </p>
+                <div class="project-pipeline">
+                    <span>Register</span><i class="fas fa-arrow-right"></i>
+                    <span>Match</span><i class="fas fa-arrow-right"></i>
+                    <span class="live">● Live Score</span>
+                </div>
+            </article>
+
+            <!-- PROJECT 5 -->
+            <article class="project" data-cursor="view">
+                <div class="project-top">
+                    <div class="project-tags">
+                        <span class="tag">AI · PROMPTS</span>
+                    </div>
+                    <div class="project-icon"><i class="fas fa-brain"></i></div>
+                </div>
+                <h3 class="project-title">Custom AI Chatbots & Prompt Systems</h3>
+                <p class="project-desc">
+                    Domain-specific chatbots and voice assistants deployed via LLM APIs, with structured
+                    system prompts for support workflows and automation.
+                </p>
+                <div class="project-pipeline">
+                    <span>LLM API</span><i class="fas fa-arrow-right"></i>
+                    <span>Prompt</span><i class="fas fa-arrow-right"></i>
+                    <span class="live">● Agent Live</span>
+                </div>
+            </article>
+
+            <!-- PROJECT 6 -->
+            <article class="project" data-cursor="view">
+                <div class="project-top">
+                    <div class="project-tags">
+                        <span class="tag">NATIVE DESKTOP</span>
+                    </div>
+                    <div class="project-icon"><i class="fab fa-windows"></i></div>
+                </div>
+                <h3 class="project-title">C / C++ Windows Business Apps</h3>
+                <p class="project-desc">
+                    High-performance native Windows desktop applications for offline business operations.
+                </p>
+                <div class="project-pipeline">
+                    <span>Native</span><i class="fas fa-arrow-right"></i>
+                    <span>C++ Core</span><i class="fas fa-arrow-right"></i>
+                    <span class="live">● Offline</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="section-head">
+            <span class="section-num">02 / ABOUT</span>
+            <h2 class="section-title" data-split>Founder & Engineer</h2>
+        </div>
+        
+        <div class="about-grid">
+            <!-- About Photo Card -->
+            <div class="about-photo-wrap" data-reveal>
+                <div class="about-photo-frame">
+                    <!-- 🔴 AAPKI DOOSRI PHOTO YAHAN -->
+                    <img src="images/dayan_portfolio2.jpg" alt="Syed Dayan Hussain About">
+                </div>
+            </div>
+
+            <div class="about-text">
+                <p data-reveal>
+                    I'm <strong class="highlight-text">Syed Dayan Hussain</strong>, a 2nd-year 
+                    <strong class="highlight-text">BS Artificial Intelligence</strong> student at QUEST 
+                    and founder of <strong class="highlight-text">ABH Technologies</strong>. I build commercial
+                    software — AI voice assistants, enterprise ERPs, dynamic web and Android apps.
+                </p>
+                <p data-reveal>
+                    My engineering philosophy is simple: <em class="highlight-italic">ship systems that work in the real world</em> —
+                    measured by uptime, throughput, and user experience — not just demos.
+                </p>
+                <div class="about-tags" data-reveal>
+                    <span>PHP</span><span>React</span><span>JavaScript</span>
+                    <span>C / C++</span><span>Node.js</span><span>MySQL</span>
+                    <span>API Integration</span><span>Prompt Engineering</span>
+                    <span>Android</span><span>AI Chatbots</span>
+                </div>
+            </div>
+            
+            <div class="about-cards">
+                <div class="about-card" data-reveal>
+                    <i class="fas fa-building"></i>
+                    <span>FOUNDER</span>
+                    <strong>ABH Technologies</strong>
+                    <p>Custom software house delivering business ERPs, web and Android apps.</p>
+                </div>
+                <div class="about-card" data-reveal>
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>STUDENT</span>
+                    <strong>BS Artificial Intelligence</strong>
+                    <p>Quaid-e-Awam University of Engineering, Science & Technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="stack" id="stack">
+        <div class="section-head">
+            <span class="section-num">03 / STACK</span>
+            <h2 class="section-title" data-split>Engineering Stack</h2>
+        </div>
+        <div class="stack-grid">
+            <div class="stack-item" data-reveal>
+                <span class="stack-num">01</span>
+                <h4>AI & Voice</h4>
+                <p>LLM APIs · Prompt Engineering · Speech-to-Text · TTS · Chatbots</p>
+            </div>
+            <div class="stack-item" data-reveal>
+                <span class="stack-num">02</span>
+                <h4>Frontend</h4>
+                <p>React · JavaScript · HTML5 · CSS3 · Tailwind</p>
+            </div>
+            <div class="stack-item" data-reveal>
+                <span class="stack-num">03</span>
+                <h4>Backend</h4>
+                <p>PHP · Node.js · REST APIs · Authentication</p>
+            </div>
+            <div class="stack-item" data-reveal>
+                <span class="stack-num">04</span>
+                <h4>Database</h4>
+                <p>MySQL · MongoDB · Schema Design</p>
+            </div>
+            <div class="stack-item" data-reveal>
+                <span class="stack-num">05</span>
+                <h4>Desktop & Native</h4>
+                <p>C · C++ · Windows Applications</p>
+            </div>
+            <div class="stack-item" data-reveal>
+                <span class="stack-num">06</span>
+                <h4>Mobile</h4>
+                <p>Android · Dynamic Cloud Sync</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="vision" id="vision">
+        <div class="section-head">
+            <span class="section-num">04 / VISION</span>
+            <h2 class="section-title" data-split>Future Trajectory</h2>
+        </div>
+        <div class="vision-grid">
+            <div class="vision-card" data-reveal>
+                <i class="fas fa-robot"></i>
+                <h4>AI & Robotics Industry</h4>
+                <p>
+                    My long-term goal is to pioneer innovations that merge conversational AI brains
+                    with physical robotic hardware — building autonomous systems for real industries.
+                </p>
+            </div>
+            <div class="vision-card" data-reveal>
+                <i class="fas fa-microchip"></i>
+                <h4>Industrial AI Systems</h4>
+                <p>
+                    Focused on neural decision models, edge AI, and real-time autonomy for industrial
+                    and mobility sectors.
+                </p>
+            </div>
+            <div class="vision-card" data-reveal>
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Continuous Mastery</h4>
+                <p>
+                    Committed to lifelong learning — mastering AI/ML, autonomy, and system architecture.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <span class="section-num">05 / CONTACT</span>
+            <h2 class="contact-title" data-split>Let's Build Something</h2>
+            <p class="contact-sub" data-reveal>
+                Open for custom software engineering, ERP development, and AI integration projects.
+            </p>
+
+            <div class="contact-links">
+                <a href="https://wa.me/923223010472" target="_blank" class="contact-link" data-magnetic data-cursor="hover">
+                    <span>WHATSAPP</span>
+                    <strong>0322-3010472</strong>
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="mailto:sdayan441@gmail.com" class="contact-link" data-magnetic data-cursor="hover">
+                    <span>PERSONAL MAIL</span>
+                    <strong>sdayan441@gmail.com</strong>
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="mailto:syeddayanhussain@quest.edu.pk" class="contact-link" data-magnetic data-cursor="hover">
+                    <span>QUEST MAIL</span>
+                    <strong>syeddayanhussain@quest.edu.pk</strong>
+                    <i class="fas fa-university"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>© 2025 SYED DAYAN HUSSAIN — ABH TECHNOLOGIES</span>
+            <span>CRAFTED IN OBSIDIAN · PLATINUM · 3D</span>
+        </div>
+    </footer>
+
+    <!-- LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
